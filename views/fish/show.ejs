@@ -1,0 +1,15 @@
+<h2><%= fish.name %></h2>
+<div>Location: <%= fish.location %></div>
+<div>Caught Date: <%= fish.caughtDate %></div>
+<div>Length: <%= fish.length %></div>
+<div>Water Temperature: <%= fish.waterTemp %></div>
+<div>Line Color: <%= fish.lineColor %></div>
+<div>Sinker Weight: <%= fish.sinkerWeight %></div>
+<div>Tide: <%= fish.tide %></div>
+<div>Bait: <%= fish.bait %></div>
+<div>Rig: <%= fish.rig %></div>
+
+<a href="/fish/<%= fish.id %>/edit">Edit</a>
+<%- include('../partials/deleteForm',
+    {url: `/fish/${fish.id}`}) %>
+

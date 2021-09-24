@@ -1,0 +1,58 @@
+<div>
+    <label>Species</label>
+    <input type="text" name="name" value="<%= fish.name %>">
+</div>
+
+<div>
+    <label>Location</label>
+    <input type="text" name="location" value="<%= fish.location %>">
+</div>
+
+<div>
+    <label>Caught Date</label>
+    <input type="date" name="caughtDate"
+    value="<%= fish.caughtDate == null ? '' : fish.caughtDate.toISOString().split('T')[0] %>">
+</div>
+
+<div>
+    <label>Length</label>
+    <input type="number" name="length" value="<%= fish.length %>">
+</div>
+
+<div>
+    <label>Water Temperature</label>
+    <input type="number" name="waterTemp" value="<%= fish.waterTemp %>">
+</div>
+
+<div>
+    <label>Line color</label>
+    <input type="text" name="lineColor" value="<%= fish.lineColor %>">
+</div>
+
+<div>
+    <label>Sinker Weight</label>
+    <input type="number" name="sinkerWeight" value="<%= fish.sinkerWeight %>">
+</div>
+
+<div>
+    <label>Tide</label>
+    <input type="number" name="tide" value="<%= fish.tide %>">
+</div>
+
+<div>
+    <label>Bait</label>
+    <input type="text" name="bait" value="<%= fish.bait %>">
+</div>
+
+<div>
+    <label>Rig</label>
+    <textarea name="rig"><%= fish.rig %></textarea>
+</div>
+
+
+
+
+
+
+
+

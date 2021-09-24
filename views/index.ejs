@@ -1,1 +1,8 @@
-Testing
+<h2>Recently Added</h2>
+<div>
+    <% fishes.forEach(fish => { %>
+    <a href="/fish/<%= fish.id %>">
+        <div><%= fish.name %></div>
+    </a>
+    <% }) %>
+</div>
