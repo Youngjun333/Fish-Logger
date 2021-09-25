@@ -1,15 +1,30 @@
 <h2 class="page-header"><%= fish.name %></h2>
-<div>Location: <%= fish.location %></div>
-<div>Caught Date: <%= fish.caughtDate %></div>
-<div>Length: <%= fish.length %></div>
-<div>Water Temperature: <%= fish.waterTemp %></div>
-<div>Line Color: <%= fish.lineColor %></div>
-<div>Sinker Weight: <%= fish.sinkerWeight %></div>
-<div>Tide: <%= fish.tide %></div>
-<div>Bait: <%= fish.bait %></div>
-<div>Rig: <%= fish.rig %></div>
+<div class="fish-details">
+    <div class="fish-details-grid">
+        <div class="fish-details-label">Location: </div>
+        <div><%= fish.location %></div>
+        <div class="fish-details-label">Caught Date: </div>
+        <div><%= fish.caughtDate %></div>
+        <div class="fish-details-label">Length: </div>
+        <div><%= fish.length %></div>
+        <div class="fish-details-label">Water Temperature: </div>
+        <div><%= fish.waterTemp %></div>
+        <div class="fish-details-label">Line Color: </div>
+        <div><%= fish.lineColor %></div>
+        <div class="fish-details-label">Sinker Weight: </div>
+        <div><%= fish.sinkerWeight %></div>
+        <div class="fish-details-label">Tide: </div>
+        <div><%= fish.tide %></div>
+        <div class="fish-details-label">Bait: </div>
+        <div><%= fish.bait %></div>
+        <div class="fish-details-label">Rig: </div>
+        <div><%= fish.rig %></div>
+    </div>
 
-<a href="/fish/<%= fish.id %>/edit">Edit</a>
-<%- include('../partials/deleteForm',
-    {url: `/fish/${fish.id}`}) %>
+    <div class="fish-details-btn-grid">
+        <a class="btn btn-primary" href="/fish/<%= fish.id %>/edit">Edit</a>
+        <%- include('../partials/deleteForm',
+            {url: `/fish/${fish.id}`}) %>
+    </div>
+</div>
 

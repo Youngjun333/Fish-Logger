@@ -7,11 +7,38 @@
 .fish-name {
     font-size: 1.5rem;
     color: var(--color-text-light);
-    font-weight: var(--nav-link-font-weight);
+}
+
+.fish-view-link {
     text-decoration: none;
 }
 
 
-.fish-name a:hover {
-    color: white;
+.fish-view {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.fish-details-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    align-self: flex-start;
+}
+
+.fish-details-grid {
+    display: grid;
+    align-content: flex-start;
+    align-items: center;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto;
+}
+
+.fish-details-btn-grid {
+    display: grid;
+    justify-items: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-gap: .5rem;
+    margin-top: .5rem;
+
 }

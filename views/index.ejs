@@ -1,8 +1,8 @@
 <h2 class="page-header">Recently Added</h2>
-<div class="fish-row">
+<div class="fish-view">
     <% fishes.forEach(fish => { %>
-    <a class="fish-name" href="/fish/<%= fish.id %>">
-        <div><%= fish.name %></div>
+    <a class="fish-view-link" href="/fish/<%= fish.id %>">
+        <div class="fish-name"><%= fish.name %></div>
     </a>
     <% }) %>
 </div>
