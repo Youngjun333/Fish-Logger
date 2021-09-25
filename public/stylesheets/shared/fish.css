@@ -1,0 +1,17 @@
+.fish-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.fish-name {
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    font-weight: var(--nav-link-font-weight);
+    text-decoration: none;
+}
+
+
+.fish-name a:hover {
+    color: white;
+}

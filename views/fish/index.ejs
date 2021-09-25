@@ -1,62 +1,73 @@
-<h2>Search Fish</h2>
+<h2 class="page-header">Search Fish</h2>
 <form action="/fish" method="GET">
-    <div>
-        <label>Species</label>
-        <input type="text" name="name" value="<%= searchOptions.name %>">
+    <div class="form-row">
+        <div class="form-item">
+            <label>Species</label>
+            <input type="text" name="name" value="<%= searchOptions.name %>">
+        </div>
+        <div class="form-item">
+            <label>Location</label>
+            <input type="text" name="location" value="<%= searchOptions.location %>">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-item">
+            <label>Caught Date</label>
+            <input type="date" name="caughtDate" value="<%= searchOptions.caughtDate %>">
+        </div>
+        <div class="form-item">
+            <label>Length</label>
+            <input type="number" name="length" value="<%= searchOptions.length %>">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-item">
+            <label>Water Temperature</label>
+            <input type="number" name="waterTemp" value="<%= searchOptions.waterTemp %>">
+        </div>
+        <div class="form-item">
+            <label>Line color</label>
+            <input type="text" name="lineColor" value="<%= searchOptions.lineColor %>">
+        </div>
     </div>
     
-    <div>
-        <label>Location</label>
-        <input type="text" name="location" value="<%= searchOptions.location %>">
+    <div class="form-row">
+        <div class="form-item">
+            <label>Sinker Weight</label>
+            <input type="number" name="sinkerWeight" value="<%= searchOptions.sinkerWeight %>">
+        </div>
+        <div class="form-item">
+            <label>Tide</label>
+            <input type="number" name="tide" value="<%= searchOptions.tide %>">
+        </div>
     </div>
-    
-    <div>
-        <label>Caught Date</label>
-        <input type="date" name="caughtDate" value="<%= searchOptions.caughtDate %>">
+
+    <div class="form-row">
+        <div class="form-item">
+            <label>Bait</label>
+            <input type="text" name="bait" value="<%= searchOptions.bait %>">
+        </div>
+        <div class="form-item">
+            <label>Rig</label>
+            <textarea name="rig"><%= searchOptions.rig %></textarea>
+        </div>
     </div>
-    
-    <div>
-        <label>Length</label>
-        <input type="number" name="length" value="<%= searchOptions.length %>">
+    <div class="form-row form-row-end">
+        <button class="btn btn-primary" type="submit">Search</button>
     </div>
-    
-    <div>
-        <label>Water Temperature</label>
-        <input type="number" name="waterTemp" value="<%= searchOptions.waterTemp %>">
-    </div>
-    
-    <div>
-        <label>Line color</label>
-        <input type="text" name="lineColor" value="<%= searchOptions.lineColor %>">
-    </div>
-    
-    <div>
-        <label>Sinker Weight</label>
-        <input type="number" name="sinkerWeight" value="<%= searchOptions.sinkerWeight %>">
-    </div>
-    
-    <div>
-        <label>Tide</label>
-        <input type="number" name="tide" value="<%= searchOptions.tide %>">
-    </div>
-    
-    <div>
-        <label>Bait</label>
-        <input type="text" name="bait" value="<%= searchOptions.bait %>">
-    </div>
-    
-    <div>
-        <label>Rig</label>
-        <textarea name="rig"><%= searchOptions.rig %></textarea>
-    </div>
-    <button type="submit">Search</button>
 </form>
 <br>
 
 <% fishes.forEach(fish => { %>
-    <div><%= fish.name %></div>
-    <a href="/fish/<%= fish.id %>">View</a>
-    <a href="/fish/<%= fish.id %>/edit">Edit</a>
-    <%- include('../partials/deleteForm', 
-        {url: `/fish/${fish.id}` }) %>
+    <div class="fish-row">
+        <div class="fish-name"><%= fish.name %></div>
+        <div class="btn-row">
+            <a class="btn btn-primary" href="/fish/<%= fish.id %>">View</a>
+            <a class="btn btn-primary" href="/fish/<%= fish.id %>/edit">Edit</a>
+            <%- include('../partials/deleteForm', 
+                {url: `/fish/${fish.id}` }) %>
+        </div>
+    </div>
 <% }) %>

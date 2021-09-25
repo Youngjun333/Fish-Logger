@@ -1,52 +1,57 @@
-<div>
-    <label>Species</label>
-    <input type="text" name="name" value="<%= fish.name %>">
+<div class="form-row">
+    <div class="form-item">
+        <label>Species</label>
+        <input type="text" name="name" value="<%= fish.name %>">
+    </div>
+    <div class="form-item">
+        <label>Location</label>
+        <input type="text" name="location" value="<%= fish.location %>">
+    </div>
 </div>
 
-<div>
-    <label>Location</label>
-    <input type="text" name="location" value="<%= fish.location %>">
+<div class="form-row">
+    <div class="form-item">
+        <label>Caught Date</label>
+        <input type="date" name="caughtDate"
+        value="<%= fish.caughtDate == null ? '' : fish.caughtDate.toISOString().split('T')[0] %>">
+    </div>
+    <div class="form-item">
+        <label>Length</label>
+        <input type="number" name="length" value="<%= fish.length %>">
+    </div>
 </div>
 
-<div>
-    <label>Caught Date</label>
-    <input type="date" name="caughtDate"
-    value="<%= fish.caughtDate == null ? '' : fish.caughtDate.toISOString().split('T')[0] %>">
+<div class="form-row">
+    <div class="form-item">
+        <label>Water Temperature</label>
+        <input type="number" name="waterTemp" value="<%= fish.waterTemp %>">
+    </div>
+    <div class="form-item">
+        <label>Line color</label>
+        <input type="text" name="lineColor" value="<%= fish.lineColor %>">
+    </div>
 </div>
 
-<div>
-    <label>Length</label>
-    <input type="number" name="length" value="<%= fish.length %>">
+<div class="form-row">
+    <div class="form-item">
+        <label>Sinker Weight</label>
+        <input type="number" name="sinkerWeight" value="<%= fish.sinkerWeight %>">
+    </div>
+    <div class="form-item">
+        <label>Tide</label>
+        <input type="number" name="tide" value="<%= fish.tide %>">
+    </div>
 </div>
 
-<div>
-    <label>Water Temperature</label>
-    <input type="number" name="waterTemp" value="<%= fish.waterTemp %>">
-</div>
-
-<div>
-    <label>Line color</label>
-    <input type="text" name="lineColor" value="<%= fish.lineColor %>">
-</div>
-
-<div>
-    <label>Sinker Weight</label>
-    <input type="number" name="sinkerWeight" value="<%= fish.sinkerWeight %>">
-</div>
-
-<div>
-    <label>Tide</label>
-    <input type="number" name="tide" value="<%= fish.tide %>">
-</div>
-
-<div>
-    <label>Bait</label>
-    <input type="text" name="bait" value="<%= fish.bait %>">
-</div>
-
-<div>
-    <label>Rig</label>
-    <textarea name="rig"><%= fish.rig %></textarea>
+<div class="form-row">
+    <div class="form-item">
+        <label>Bait</label>
+        <input type="text" name="bait" value="<%= fish.bait %>">
+    </div>
+    <div class="form-item">
+        <label>Rig</label>
+        <textarea name="rig"><%= fish.rig %></textarea>
+    </div>
 </div>
 
 

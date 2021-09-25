@@ -1,6 +1,8 @@
-<h2>Edit Fish</h2>
+<h2 class="page-header">Edit Fish</h2>
 <form action="/fish/<%= fish.id %>?_method=PUT" method="POST">
     <%- include('_form_fields') %>
-    <a href="/fish/<%= fish.id %>">Cancel</a>
-    <button type="submit">Update</button>
+    <div class="form-row form-row-end btn-row">
+        <a class="btn btn-danger" href="/fish/<%= fish.id %>">Cancel</a>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </div>
 </form>
